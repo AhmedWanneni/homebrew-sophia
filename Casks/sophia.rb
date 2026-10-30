@@ -3,14 +3,12 @@ cask "sophia" do
 
   on_arm do
     sha256 "c706cd715df3a48f004cb6eee8401c8bff0e55180cec170f20f00b98ae8c41ed"
-    url "https://github.com/AhmedWanneni/davinci-notes-workspace/releases/download/v#{version}/Sophia_#{version}_aarch64.dmg",
-        verified: "github.com/AhmedWanneni/davinci-notes-workspace/"
+    url "https://github.com/AhmedWanneni/davinci-notes-workspace/releases/download/v#{version}/Sophia_#{version}_aarch64.dmg"
   end
 
   on_intel do
     sha256 :no_check
-    url "https://github.com/AhmedWanneni/davinci-notes-workspace/releases/download/v#{version}/Sophia_#{version}_x64.dmg",
-        verified: "github.com/AhmedWanneni/davinci-notes-workspace/"
+    url "https://github.com/AhmedWanneni/davinci-notes-workspace/releases/download/v#{version}/Sophia_#{version}_x64.dmg"
   end
 
   name "Sophia"
@@ -18,15 +16,9 @@ cask "sophia" do
   homepage "https://sophia-notes.pages.dev"
 
   auto_updates false
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Sophia.app"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Sophia.app"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Application Support/com.sophia.notes",
