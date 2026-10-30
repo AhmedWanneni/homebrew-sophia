@@ -2,7 +2,7 @@ cask "sophia" do
   version "0.1.0"
 
   on_arm do
-    sha256 "c706cd715df3a48f004cb6eee8401c8bff0e55180cec170f20f00b98ae8c41ed"
+    sha256 "f9634551f926114a72af6c67c95e0e2cf356c09b8cdc2c57cfc6ccd5a983203c"
     url "https://github.com/AhmedWanneni/davinci-notes-workspace/releases/download/v#{version}/Sophia_#{version}_aarch64.dmg"
   end
 
